@@ -59,7 +59,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
                 }
             }
-        //taskDataSource.tasks[indexPath.row].state = !taskDataSource.tasks[indexPath.row].state
+        
         for val in taskDataSource.tasks{
             print(val)
         }
@@ -69,7 +69,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             if editingStyle == UITableViewCell.EditingStyle.delete{
                 
                 taskDataSource.remove(at: indexPath.row)
-                tableView.reloadData()
+                tableView.deleteRows(at: [indexPath], with: .fade)
                 
                 for val in taskDataSource.tasks{
                     print(val)
