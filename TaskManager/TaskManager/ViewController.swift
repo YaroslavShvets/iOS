@@ -45,18 +45,21 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             
             if let cell = tableView.cellForRow(at: indexPath){
                 
-                if cell.accessoryType == UITableViewCell.AccessoryType.checkmark{
-                    
-                    cell.accessoryType = UITableViewCell.AccessoryType.none
-                    cell.textLabel?.attributedText = unstrikeText
-                }
-                else {
+                if taskDataSource.tasks[indexPath.row].state{
                     
                     cell.accessoryType = UITableViewCell.AccessoryType.checkmark
                     cell.textLabel?.attributedText = strikeText
+                    taskDataSource.tasks[indexPath.row].state = false
+                }
+                else {
+                    
+                    cell.accessoryType = UITableViewCell.AccessoryType.none
+                    cell.textLabel?.attributedText = unstrikeText
+                    taskDataSource.tasks[indexPath.row].state = true
+
                 }
             }
-        taskDataSource.tasks[indexPath.row].state = !taskDataSource.tasks[indexPath.row].state
+        //taskDataSource.tasks[indexPath.row].state = !taskDataSource.tasks[indexPath.row].state
         for val in taskDataSource.tasks{
             print(val)
         }
