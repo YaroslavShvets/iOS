@@ -1,16 +1,15 @@
 import UIKit
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, AddScreenViewDelegate {
     
-    var taskDataSource = TaskDataSource()
-    
-    
-    let cellReuseIdentifier = "cell"
-    
-    @IBAction func addCell(_ sender: Any) {
-        
+    func addTask(_ task: Task) {
+        taskDataSource.append(task: task )
+        tableView.insertRows(at: [IndexPath(row: taskDataSource.numberOfTasks()-1, section: 0)], with: .automatic)
     }
     
+    
+    var taskDataSource = TaskDataSource()
+    let cellReuseIdentifier = "cell"
     
     @IBOutlet var tableView: UITableView!
     
@@ -24,6 +23,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         tableView.dataSource = self
     }
      
+    @IBAction func newCellButton(_ sender: Any) {
+        
+        let addScreenView = AddScreenView(nibName: nil, bundle: nil)
+        addScreenView.delegate = self
+        present(addScreenView, animated: true)
+    }
     // number of rows in table view
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         

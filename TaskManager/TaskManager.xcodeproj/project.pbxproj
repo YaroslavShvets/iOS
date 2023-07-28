@@ -15,6 +15,8 @@
 		B1BC505F2A5C7C7200AABFCC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1BC505D2A5C7C7200AABFCC /* Main.storyboard */; };
 		B1BC50612A5C7C7300AABFCC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1BC50602A5C7C7300AABFCC /* Assets.xcassets */; };
 		B1BC50642A5C7C7300AABFCC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1BC50622A5C7C7300AABFCC /* LaunchScreen.storyboard */; };
+		B1FFBE4E2A70F37300A49579 /* AddScreenView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B1FFBE4D2A70F37300A49579 /* AddScreenView.xib */; };
+		B1FFBE502A70F49C00A49579 /* AddScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FFBE4F2A70F49C00A49579 /* AddScreenView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		B1BC50602A5C7C7300AABFCC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B1BC50632A5C7C7300AABFCC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B1BC50652A5C7C7300AABFCC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B1FFBE4D2A70F37300A49579 /* AddScreenView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddScreenView.xib; sourceTree = "<group>"; };
+		B1FFBE4F2A70F49C00A49579 /* AddScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddScreenView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,11 +67,13 @@
 				B1BC50572A5C7C7200AABFCC /* AppDelegate.swift */,
 				B1BC50592A5C7C7200AABFCC /* SceneDelegate.swift */,
 				B1BC505B2A5C7C7200AABFCC /* ViewController.swift */,
+				B1FFBE4F2A70F49C00A49579 /* AddScreenView.swift */,
 				B17984762A65B881004F2CF2 /* Task.swift */,
 				B17984782A65B948004F2CF2 /* TaskDataSource.swift */,
 				B1BC505D2A5C7C7200AABFCC /* Main.storyboard */,
-				B1BC50602A5C7C7300AABFCC /* Assets.xcassets */,
+				B1FFBE4D2A70F37300A49579 /* AddScreenView.xib */,
 				B1BC50622A5C7C7300AABFCC /* LaunchScreen.storyboard */,
+				B1BC50602A5C7C7300AABFCC /* Assets.xcassets */,
 				B1BC50652A5C7C7300AABFCC /* Info.plist */,
 			);
 			path = TaskManager;
@@ -132,6 +138,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B1BC50642A5C7C7300AABFCC /* LaunchScreen.storyboard in Resources */,
+				B1FFBE4E2A70F37300A49579 /* AddScreenView.xib in Resources */,
 				B1BC50612A5C7C7300AABFCC /* Assets.xcassets in Resources */,
 				B1BC505F2A5C7C7200AABFCC /* Main.storyboard in Resources */,
 			);
@@ -146,6 +153,7 @@
 			files = (
 				B17984772A65B881004F2CF2 /* Task.swift in Sources */,
 				B1BC505C2A5C7C7200AABFCC /* ViewController.swift in Sources */,
+				B1FFBE502A70F49C00A49579 /* AddScreenView.swift in Sources */,
 				B1BC50582A5C7C7200AABFCC /* AppDelegate.swift in Sources */,
 				B17984792A65B948004F2CF2 /* TaskDataSource.swift in Sources */,
 				B1BC505A2A5C7C7200AABFCC /* SceneDelegate.swift in Sources */,

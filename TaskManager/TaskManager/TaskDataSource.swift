@@ -1,4 +1,4 @@
-import UIKit
+import Foundation
 
 class TaskDataSource {
     
@@ -19,9 +19,8 @@ class TaskDataSource {
         return tasks.count
     }
     
-    func append(task: Task, to tableView: UITableView) {
+    func append(task: Task) {
         tasks.append(task)
-        tableView.insertRows(at: [IndexPath(row: tasks.count-1, section: 0)], with: .automatic)
     }
     
     func remove(at: Int) {
